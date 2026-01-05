@@ -5,21 +5,21 @@
 class Tempo < Formula
   desc "Terminal UI for Temporal workflow management"
   homepage "https://github.com/galaxy-io/tempo"
-  version "0.1.1"
+  version "0.1.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/galaxy-io/tempo/releases/download/v0.1.1/tempo_darwin_amd64.tar.gz"
-      sha256 "ddaa57f525a968ccb4e3dc16f43a6b68d71b6a8f8151449a9b67d965a3258dec"
+      url "https://github.com/galaxy-io/tempo/releases/download/v0.1.3/tempo_darwin_amd64.tar.gz"
+      sha256 "604503366e4fdec2f28d5812803f1e682c4458d9831c69d86dd0b08dcd2b5382"
 
       def install
         bin.install "tempo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/galaxy-io/tempo/releases/download/v0.1.1/tempo_darwin_arm64.tar.gz"
-      sha256 "e9e02bf517443a394bf55c86ff8ba16b1d549271293d2069ef9fa9aa2a8a3463"
+      url "https://github.com/galaxy-io/tempo/releases/download/v0.1.3/tempo_darwin_arm64.tar.gz"
+      sha256 "85ecae8064e07fb26c5a97017a7d407c5b028cf2b9844e8a983362b3c1f49223"
 
       def install
         bin.install "tempo"
@@ -29,15 +29,15 @@ class Tempo < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/galaxy-io/tempo/releases/download/v0.1.1/tempo_linux_amd64.tar.gz"
-      sha256 "e0d2f9f6778930b9229c44c35dab13d8f799ee6bc53a0caf0061323caa17575d"
+      url "https://github.com/galaxy-io/tempo/releases/download/v0.1.3/tempo_linux_amd64.tar.gz"
+      sha256 "3e9596af217c8f4b02f11714102c9750a0659a427e9b91a63a426bd991a79569"
       def install
         bin.install "tempo"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/galaxy-io/tempo/releases/download/v0.1.1/tempo_linux_arm64.tar.gz"
-      sha256 "b17664a9a26417f58779ecfc631c74326218d62e4ab1e9cda99d439414c085e8"
+      url "https://github.com/galaxy-io/tempo/releases/download/v0.1.3/tempo_linux_arm64.tar.gz"
+      sha256 "abb3e93a6ec9c31706c261d2a1dfc2dffeaa6cdea7a8b8836563669714714a5a"
       def install
         bin.install "tempo"
       end
