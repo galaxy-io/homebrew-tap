@@ -1,18 +1,20 @@
-# Galaxy-io Tap
+# homebrew-tap
 
-## How do I install these formulae?
+Homebrew formulae that allows installation of galaxy tools through the [Homebrew](https://brew.sh/) package manager.
 
-`brew install galaxy-io/tap/<formula>`
+## Installation
 
-Or `brew tap galaxy-io/tap` and then `brew install <formula>`.
-
-Or, in a `brew bundle` `Brewfile`:
-
-```ruby
-tap "galaxy-io/tap"
-brew "<formula>"
 ```
+brew tap galaxy-io/tap
+brew install <FORMULA>
+```
+
+## Formulae
+
+| Repository | Formula | Description |
+| ---------- | ------- | ----------- |
+| [tempo](https://github.com/galaxy-io/tempo) | [formula](Formula/tempo.rb) | Terminal UI for Temporal workflow management |
 
 ## Documentation
 
-`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
+`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh/).
