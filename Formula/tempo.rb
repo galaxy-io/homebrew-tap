@@ -5,23 +5,23 @@
 class Tempo < Formula
   desc "Terminal UI for Temporal workflow management"
   homepage "https://github.com/galaxy-io/tempo"
-  version "0.1.6"
+  version "0.1.7"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/galaxy-io/tempo/releases/download/v0.1.6/tempo_darwin_amd64.tar.gz"
-      sha256 "e3c9bd64342e7f6108b7143b568074a5768c38a129f30821c76693795fa51f6e"
+      url "https://github.com/galaxy-io/tempo/releases/download/v0.1.7/tempo_darwin_amd64.tar.gz"
+      sha256 "cb88fc3855a0f038491e0cbecc0104607f07e359cac32bdc90f96d1de6cc81d0"
 
-      def install
+      define_method(:install) do
         bin.install "tempo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/galaxy-io/tempo/releases/download/v0.1.6/tempo_darwin_arm64.tar.gz"
-      sha256 "aa933fda4516d383fbbe508c634056e84c0b19f071e7b7f7dc125aaf7317c1d3"
+      url "https://github.com/galaxy-io/tempo/releases/download/v0.1.7/tempo_darwin_arm64.tar.gz"
+      sha256 "816c2758c260128623eb3544f8dbe11ca6855f4e1184a4e0e667a9acf0b83904"
 
-      def install
+      define_method(:install) do
         bin.install "tempo"
       end
     end
@@ -29,16 +29,16 @@ class Tempo < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/galaxy-io/tempo/releases/download/v0.1.6/tempo_linux_amd64.tar.gz"
-      sha256 "7a34854b7b00c1caf2d9be5c408810d6d963ea0188f7b8ebd19c6c30503ab872"
-      def install
+      url "https://github.com/galaxy-io/tempo/releases/download/v0.1.7/tempo_linux_amd64.tar.gz"
+      sha256 "2f986121046778e595a87d56ac6a20223d03fc2c6dc09d95ab0ae8f19ac5803b"
+      define_method(:install) do
         bin.install "tempo"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/galaxy-io/tempo/releases/download/v0.1.6/tempo_linux_arm64.tar.gz"
-      sha256 "239b1acf8f544bc73a98ee7ca870416595eca660d546c7b56fa309ea17ff8d66"
-      def install
+      url "https://github.com/galaxy-io/tempo/releases/download/v0.1.7/tempo_linux_arm64.tar.gz"
+      sha256 "276ab3d47f5147efc40c46a37114972e1fe86d9ecac7e3d048be36076fc49826"
+      define_method(:install) do
         bin.install "tempo"
       end
     end
