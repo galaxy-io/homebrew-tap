@@ -5,21 +5,21 @@
 class Tempo < Formula
   desc "Terminal UI for Temporal workflow management"
   homepage "https://github.com/galaxy-io/tempo"
-  version "0.1.11"
+  version "0.1.12"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/galaxy-io/tempo/releases/download/v0.1.11/tempo_darwin_amd64.tar.gz"
-      sha256 "ab51dfb95aae99ac625ed24456e275aee2f6aed2b37aeb7e58cb3a89d950b8d6"
+      url "https://github.com/galaxy-io/tempo/releases/download/v0.1.12/tempo_darwin_amd64.tar.gz"
+      sha256 "32860a736469d01a0f9ab0da0bd85dd1651579e51ec203f0bb6c826a670fc86e"
 
       define_method(:install) do
         bin.install "tempo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/galaxy-io/tempo/releases/download/v0.1.11/tempo_darwin_arm64.tar.gz"
-      sha256 "12865be34d839acbd92939f6d8b2438e1d2567293130762ead06ff5c19f6742d"
+      url "https://github.com/galaxy-io/tempo/releases/download/v0.1.12/tempo_darwin_arm64.tar.gz"
+      sha256 "877a873c076fea3414e6aeadaa9fca424f6d761388b6889bff121882925a3e36"
 
       define_method(:install) do
         bin.install "tempo"
@@ -29,15 +29,15 @@ class Tempo < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/galaxy-io/tempo/releases/download/v0.1.11/tempo_linux_amd64.tar.gz"
-      sha256 "2c9c3b3325a66606e6e0daf9fe5a4ce55afb48b8ed19197b6ca4510a3a08b1ad"
+      url "https://github.com/galaxy-io/tempo/releases/download/v0.1.12/tempo_linux_amd64.tar.gz"
+      sha256 "0c1f38930c12f7ecea932c8ab7f8b6b1efe1e155d1d9b393a3fe31d9c43142a3"
       define_method(:install) do
         bin.install "tempo"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/galaxy-io/tempo/releases/download/v0.1.11/tempo_linux_arm64.tar.gz"
-      sha256 "bc6614b7fc9bc05455bcb3c66f97974961da7cd653f49ad999e06e57b8669a2e"
+      url "https://github.com/galaxy-io/tempo/releases/download/v0.1.12/tempo_linux_arm64.tar.gz"
+      sha256 "2bf3ff38449a85e6b0c799e7a9dfcb6298bbcfd8a34b371ac87e7b0d4deef900"
       define_method(:install) do
         bin.install "tempo"
       end
