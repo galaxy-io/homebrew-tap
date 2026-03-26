@@ -5,21 +5,21 @@
 class Gnat < Formula
   desc "Terminal UI for NATS JetStream management"
   homepage "https://github.com/galaxy-io/gnat"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/galaxy-io/gnat/releases/download/v0.1.1/gnat_darwin_amd64.tar.gz"
-      sha256 "03abc7058653f62ddfa112fffbf5c211ff057849b6163f71e9375878394a84c4"
+      url "https://github.com/galaxy-io/gnat/releases/download/v0.1.2/gnat_darwin_amd64.tar.gz"
+      sha256 "36cec823691ba07b9bc19add1a00a6b91029d54267cec28e24c7f5d40de1079e"
 
       define_method(:install) do
         bin.install "gnat"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/galaxy-io/gnat/releases/download/v0.1.1/gnat_darwin_arm64.tar.gz"
-      sha256 "c963dd6d3992dac476e4c190b509642d87e61c7354f61da0ba24b495ca3b4efb"
+      url "https://github.com/galaxy-io/gnat/releases/download/v0.1.2/gnat_darwin_arm64.tar.gz"
+      sha256 "a6b1058c731d6ad6010af1a3a18061b33aac7468f6a3abd27eb1127dc78291ca"
 
       define_method(:install) do
         bin.install "gnat"
@@ -29,15 +29,15 @@ class Gnat < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/galaxy-io/gnat/releases/download/v0.1.1/gnat_linux_amd64.tar.gz"
-      sha256 "abd0464207928d06544c10238d0eb49a7c56e270418e3b293a786645b3295936"
+      url "https://github.com/galaxy-io/gnat/releases/download/v0.1.2/gnat_linux_amd64.tar.gz"
+      sha256 "21cf5cc094eb8aa759770d66f54689c52cd756f72879dcee75f8793502ea9486"
       define_method(:install) do
         bin.install "gnat"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/galaxy-io/gnat/releases/download/v0.1.1/gnat_linux_arm64.tar.gz"
-      sha256 "19bd7c51d6c988f78fd2edbaa1a3d7538644edc8da5313e7f16ac4965caac602"
+      url "https://github.com/galaxy-io/gnat/releases/download/v0.1.2/gnat_linux_arm64.tar.gz"
+      sha256 "1948fc1221f3c1504c55184f9cb43228bbdc7546d8bf66bec6c7b8bb9c127ad0"
       define_method(:install) do
         bin.install "gnat"
       end
