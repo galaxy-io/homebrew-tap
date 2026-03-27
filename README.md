@@ -14,7 +14,7 @@ brew install <FORMULA>
 | Repository | Formula | Description |
 | ---------- | ------- | ----------- |
 | [tempo](https://github.com/galaxy-io/tempo) | [formula](Formula/tempo.rb) | Terminal UI for Temporal workflow management |
-
+| [gnat](https://github.com/galaxy-io/gnat) | [formula](Formula/gnat.rb) | Terminal UI for NATS |
 ## Documentation
 
 `brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh/).
