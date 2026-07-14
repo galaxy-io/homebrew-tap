@@ -8,7 +8,7 @@ on:
 jobs:
   pr-pull:
     if: contains(github.event.pull_request.labels.*.name, 'pr-pull')
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     permissions:
       actions: read
       checks: read
@@ -16,23 +16,31 @@ jobs:
       issues: read
       pull-requests: write
     steps:
+      - name: Generate GitHub Token
+        id: app-token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ secrets.GX_NULL_APP_ID }}
+          private-key: ${{ secrets.GX_NULL_PRIVATE_KEY }}
+
       - name: Set up Homebrew
         uses: Homebrew/actions/setup-homebrew@main
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ steps.app-token.outputs.token }}
 
       - name: Set up git
         uses: Homebrew/actions/git-user-config@main
 
       - name: Pull bottles
         env:
-          HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HOMEBREW_GITHUB_API_TOKEN: ${{ steps.app-token.outputs.token }}
           PULL_REQUEST: ${{ github.event.pull_request.number }}
         run: brew pr-pull --debug --tap="$GITHUB_REPOSITORY" "$PULL_REQUEST"
 
       - name: Push commits
         uses: Homebrew/actions/git-try-push@main
         with:
+          token: ${{ steps.app-token.outputs.token }}
           branch: main
 
       - name: Delete branch
