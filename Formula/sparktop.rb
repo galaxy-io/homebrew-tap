@@ -5,21 +5,21 @@
 class Sparktop < Formula
   desc "A DGX Spark TUI that takes the heat."
   homepage "https://github.com/galaxy-io/sparktop"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/galaxy-io/sparktop/releases/download/v0.1.0/sparktop_darwin_amd64.tar.gz"
-      sha256 "a5c8625fb9328fb5a00646261001a28445ce2364ebcf8e468f946b7170d12f7d"
+      url "https://github.com/galaxy-io/sparktop/releases/download/v0.1.1/sparktop_darwin_amd64.tar.gz"
+      sha256 "f97a6bcb2b4bb4c1b466696238090c209b96f40b2521f872b15e282fea4ce20a"
 
       define_method(:install) do
         bin.install "sparktop"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/galaxy-io/sparktop/releases/download/v0.1.0/sparktop_darwin_arm64.tar.gz"
-      sha256 "17d5b3ce13bd44777ed5d887441f405bbf4c1dd1b42576cc755e6e851f91d77c"
+      url "https://github.com/galaxy-io/sparktop/releases/download/v0.1.1/sparktop_darwin_arm64.tar.gz"
+      sha256 "4bd18a8c57baf4936cff69c6b6931b6ce4fdacc1cd9f953ae7dd2758e30736d2"
 
       define_method(:install) do
         bin.install "sparktop"
@@ -29,15 +29,15 @@ class Sparktop < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/galaxy-io/sparktop/releases/download/v0.1.0/sparktop_linux_amd64.tar.gz"
-      sha256 "643e7ba2ef209fcf7e93fda4f4c14edf70207ce5f591c76d88f409b947c1e67e"
+      url "https://github.com/galaxy-io/sparktop/releases/download/v0.1.1/sparktop_linux_amd64.tar.gz"
+      sha256 "fbcb7c9973c1ea50fe991553dc43a33997d354451eb620b9043000f9c64320c3"
       define_method(:install) do
         bin.install "sparktop"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/galaxy-io/sparktop/releases/download/v0.1.0/sparktop_linux_arm64.tar.gz"
-      sha256 "688e3907df2e2986d9a64e87556de1e0cd07aeca22a4faa75dd799384d0e9e6d"
+      url "https://github.com/galaxy-io/sparktop/releases/download/v0.1.1/sparktop_linux_arm64.tar.gz"
+      sha256 "a97416e5f2998e8008f4f53be81a4bd5e7476fe699c941a47b5ec13b18028dec"
       define_method(:install) do
         bin.install "sparktop"
       end
