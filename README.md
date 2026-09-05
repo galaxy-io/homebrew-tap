@@ -1,21 +1,21 @@
 # homebrew-tap
 
-Homebrew formulae that allows installation of galaxy tools through the [Homebrew](https://brew.sh/) package manager.
+Homebrew packages that allow installation of galaxy tools through the [Homebrew](https://brew.sh/) package manager.
 
 ## Installation
 
 ```
 brew tap galaxy-io/tap
-brew install <FORMULA>
+brew install <PACKAGE>
 ```
 
-## Formulae
+## Packages
 
-| Repository | Formula | Description |
+| Repository | Package | Description |
 | ---------- | ------- | ----------- |
-| [tempo](https://github.com/galaxy-io/tempo) | [formula](Formula/tempo.rb) | TUI Client for Temporal |
-| [gnat](https://github.com/galaxy-io/gnat) | [formula](Formula/gnat.rb) | TUI Client for NATS |
-| [sparktop](https://github.com/galaxy-io/sparktop) | [formula](Formula/sparktop.rb) | TUI Dashboard for DGX Spark |
+| [tempo](https://github.com/galaxy-io/tempo) | [cask](Casks/tempo.rb) | TUI Client for Temporal |
+| [gnat](https://github.com/galaxy-io/gnat) | [cask](Casks/gnat.rb) | TUI Client for NATS |
+| [sparktop](https://github.com/galaxy-io/sparktop) | [cask](Casks/sparktop.rb) | TUI Dashboard for DGX Spark |
 
 ## Documentation
 
