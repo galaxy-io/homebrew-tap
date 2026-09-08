@@ -4,23 +4,23 @@ cask "gnat" do
   version "0.1.8"
 
   on_macos do
-    on_intel do
-      sha256 "518534a02bb21085bdf1684f75d1051070cfae2f105926d5d9d50c60832a2fd9"
-      url "https://github.com/galaxy-io/gnat/releases/download/v0.1.8/gnat_darwin_amd64.tar.gz"
-    end
     on_arm do
       sha256 "41c2c4fcd290280ec3a85c00fc167927b664939225d5b9452cec91eb1dcff46c"
       url "https://github.com/galaxy-io/gnat/releases/download/v0.1.8/gnat_darwin_arm64.tar.gz"
     end
+    on_intel do
+      sha256 "518534a02bb21085bdf1684f75d1051070cfae2f105926d5d9d50c60832a2fd9"
+      url "https://github.com/galaxy-io/gnat/releases/download/v0.1.8/gnat_darwin_amd64.tar.gz"
+    end
   end
   on_linux do
-    on_intel do
-      sha256 "7a255587f0f8bc11361579ea16cac60b6a0c017384d14df457b3a9c5d68e8d2d"
-      url "https://github.com/galaxy-io/gnat/releases/download/v0.1.8/gnat_linux_amd64.tar.gz"
-    end
     on_arm do
       sha256 "41dcaed6515df7ab814648a96676aefc6b0c56ce7bb23af1488dac5b67934dfb"
       url "https://github.com/galaxy-io/gnat/releases/download/v0.1.8/gnat_linux_arm64.tar.gz"
+    end
+    on_intel do
+      sha256 "7a255587f0f8bc11361579ea16cac60b6a0c017384d14df457b3a9c5d68e8d2d"
+      url "https://github.com/galaxy-io/gnat/releases/download/v0.1.8/gnat_linux_amd64.tar.gz"
     end
   end
 
@@ -34,9 +34,9 @@ cask "gnat" do
 
   binary "gnat"
 
-  postflight do
-    if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/gnat"]
+  postflight_steps do
+    on_macos do
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "."], chdir: "."
     end
   end
 end
