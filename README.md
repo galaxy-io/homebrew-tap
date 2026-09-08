@@ -13,9 +13,10 @@ brew install <FORMULA>
 
 | Repository | Formula | Description |
 | ---------- | ------- | ----------- |
-| [tempo](https://github.com/galaxy-io/tempo) | [formula](Formula/tempo.rb) | TUI Client for Temporal |
-| [gnat](https://github.com/galaxy-io/gnat) | [formula](Formula/gnat.rb) | TUI Client for NATS |
-| [sparktop](https://github.com/galaxy-io/sparktop) | [formula](Formula/sparktop.rb) | TUI Dashboard for DGX Spark |
+| [filament](https://github.com/galaxy-io/filament) | [formula](Formula/filament.rb) | Pluggable data replication with checkpointing, batching, and integrity events |
+| [tempo](https://github.com/galaxy-io/tempo) | [formula](Formula/tempo.rb) | Keyboard-driven terminal client for inspecting and controlling Temporal workflows |
+| [gnat](https://github.com/galaxy-io/gnat) | [formula](Formula/gnat.rb) | Keyboard-driven terminal client for managing and monitoring NATS JetStream |
+| [sparktop](https://github.com/galaxy-io/sparktop) | [formula](Formula/sparktop.rb) | Live per-node GPU, host, and vLLM stats for DGX Spark clusters, in your terminal |
 
 ## Documentation
 
