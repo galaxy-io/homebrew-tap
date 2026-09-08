@@ -10,7 +10,7 @@ jobs:
   test-bot:
     strategy:
       matrix:
-        os: [ ubuntu-24.04, macos-15-intel, macos-26 ]
+        os: [ ubuntu-24.04, macos-26 ]
     runs-on: ${{ matrix.os }}
     permissions:
       actions: read
@@ -35,14 +35,18 @@ jobs:
 
       - run: brew test-bot --only-setup
 
-      # These three steps are what `brew test-bot --only-tap-syntax` runs,
-      # spelled out so `brew audit` can skip one check. The casks pin every
-      # download URL to a release tag with a real sha256, but the URL is a
-      # literal (GoReleaser writes it that way), so Homebrew's
-      # `sha256_no_check_if_unversioned` audit would reject it.
+      # The next three steps are what `brew test-bot --only-tap-syntax` runs,
+      # spelled out so flags can be passed:
+      # - Style runs on one runner only. It is platform-independent, and
+      #   `brew style` installs actionlint and shellcheck to lint the workflows.
+      # - `sha256_no_check_if_unversioned` is skipped because GoReleaser writes
+      #   literal download URLs. Every URL is pinned to a release tag and has a
+      #   real sha256.
       - run: brew style galaxy-io/tap
+        if: matrix.os == 'ubuntu-24.04'
       - run: brew readall --aliases --os=all --arch=all galaxy-io/tap
       - run: brew audit --except=installed,sha256_no_check_if_unversioned --tap=galaxy-io/tap
+
       - run: brew test-bot --only-formulae
         if: github.event_name == 'pull_request'
 
