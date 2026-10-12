@@ -1,26 +1,26 @@
 # Written by hand to match GoReleaser's `homebrew_casks` output for this release.
 # The next GoReleaser release of filament overwrites this file.
 cask "filament" do
-  version "0.1.1"
+  version "0.21.0"
 
   on_macos do
     on_arm do
-      sha256 "b2a643f979ad7687899cc09f75a54ebb0657a10dbece5aef1380a9ab8b8070f1"
-      url "https://github.com/galaxy-io/filament/releases/download/v0.1.1/filament_darwin_arm64.tar.gz"
+      sha256 "9ede1aa2dec6d2b0a7f64e7ad64b6f6d9ab65a53623e2c2a0b63e98bdf58b1f5"
+      url "https://github.com/galaxy-io/filament/releases/download/v0.21.0/filament_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "e39f47e8c65d93d4c6fc406acb0e4e38d4b0aafe3d0ed79b128b5e6db3b7b0cb"
-      url "https://github.com/galaxy-io/filament/releases/download/v0.1.1/filament_darwin_amd64.tar.gz"
+      sha256 "6b8fa11b10c8b980a1ad377fbb1037aaa6c8077a060844bf83051d2be280e934"
+      url "https://github.com/galaxy-io/filament/releases/download/v0.21.0/filament_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "853d8bde55c044d528fad16dc25cd529c9b480a79be63724873f7b40a6ca4e7d"
-      url "https://github.com/galaxy-io/filament/releases/download/v0.1.1/filament_linux_arm64.tar.gz"
+      sha256 "4c106d4562c2fc14d2e56b839f364cac1cc9f0505b0b79807d391fd7543a85be"
+      url "https://github.com/galaxy-io/filament/releases/download/v0.21.0/filament_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "41667ca1d54a9b8083d531f3f22ac1880d97ccf15c12553c5e2d0e45199e3f1a"
-      url "https://github.com/galaxy-io/filament/releases/download/v0.1.1/filament_linux_amd64.tar.gz"
+      sha256 "5ef073a5b56c6d408c7dc77a94f93958a287749f3f906ecd7003b98d546aa7b5"
+      url "https://github.com/galaxy-io/filament/releases/download/v0.21.0/filament_linux_amd64.tar.gz"
     end
   end
 

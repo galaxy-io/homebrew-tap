@@ -1,26 +1,26 @@
 # Written by hand to match GoReleaser's `homebrew_casks` output for this release.
 # The next GoReleaser release of gnat overwrites this file.
 cask "gnat" do
-  version "0.1.8"
+  version "0.1.9"
 
   on_macos do
     on_arm do
-      sha256 "41c2c4fcd290280ec3a85c00fc167927b664939225d5b9452cec91eb1dcff46c"
-      url "https://github.com/galaxy-io/gnat/releases/download/v0.1.8/gnat_darwin_arm64.tar.gz"
+      sha256 "d3a130b322159fc8ab90ef7876673b8031ccd883c7a1574dc5b7e41650354a63"
+      url "https://github.com/galaxy-io/gnat/releases/download/v0.1.9/gnat_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "518534a02bb21085bdf1684f75d1051070cfae2f105926d5d9d50c60832a2fd9"
-      url "https://github.com/galaxy-io/gnat/releases/download/v0.1.8/gnat_darwin_amd64.tar.gz"
+      sha256 "28c41499dd195d0308844aca5a55eda16b2cc0490a1876410792f5e1404729e9"
+      url "https://github.com/galaxy-io/gnat/releases/download/v0.1.9/gnat_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "41dcaed6515df7ab814648a96676aefc6b0c56ce7bb23af1488dac5b67934dfb"
-      url "https://github.com/galaxy-io/gnat/releases/download/v0.1.8/gnat_linux_arm64.tar.gz"
+      sha256 "6b60a8edbe226a6614ecd47529079eec061b2f74cb43d4e1617f72c5af79f8bd"
+      url "https://github.com/galaxy-io/gnat/releases/download/v0.1.9/gnat_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "7a255587f0f8bc11361579ea16cac60b6a0c017384d14df457b3a9c5d68e8d2d"
-      url "https://github.com/galaxy-io/gnat/releases/download/v0.1.8/gnat_linux_amd64.tar.gz"
+      sha256 "f4c2d271980fc7c275eb82733e41d9c833a0029a2af3d4262aab51fbf4fdd36c"
+      url "https://github.com/galaxy-io/gnat/releases/download/v0.1.9/gnat_linux_amd64.tar.gz"
     end
   end
 
