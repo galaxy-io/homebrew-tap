@@ -5,21 +5,21 @@
 class Filament < Formula
   desc "Filament CLI"
   homepage "https://github.com/galaxy-io/filament"
-  version "0.23.0"
+  version "0.24.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/galaxy-io/filament/releases/download/v0.23.0/filament_darwin_amd64.tar.gz"
-      sha256 "9cd94c0114dc1c20d56b7b8859e29f3c539fa62acd2937835709808b4231d43c"
+      url "https://github.com/galaxy-io/filament/releases/download/v0.24.0/filament_darwin_amd64.tar.gz"
+      sha256 "8b8c0c81c839a9e537a2d22b5fd2c8cf00e6a910003558e4a36b296c8ec655b6"
 
       define_method(:install) do
         bin.install "filament"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/galaxy-io/filament/releases/download/v0.23.0/filament_darwin_arm64.tar.gz"
-      sha256 "a28e35be8d994017ba27d662917911c26febefc866f461ed9fb874c0920c3d4c"
+      url "https://github.com/galaxy-io/filament/releases/download/v0.24.0/filament_darwin_arm64.tar.gz"
+      sha256 "27fd77f262ef1a6ae6919f2ea298550c0f319b49305929df947b88d6f3a6e611"
 
       define_method(:install) do
         bin.install "filament"
@@ -29,15 +29,15 @@ class Filament < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/galaxy-io/filament/releases/download/v0.23.0/filament_linux_amd64.tar.gz"
-      sha256 "f84e4f0810a4d22ce75476f40f3e60cb4d462efbe8ec9b3ab43975b0ad25ff7b"
+      url "https://github.com/galaxy-io/filament/releases/download/v0.24.0/filament_linux_amd64.tar.gz"
+      sha256 "33146b5a36749fb4167448429e5a873c09e714fb9fd3de59a24663ab89324432"
       define_method(:install) do
         bin.install "filament"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/galaxy-io/filament/releases/download/v0.23.0/filament_linux_arm64.tar.gz"
-      sha256 "9edb1e46d00406f5c8cb9ee2aaa674a093d10bde54d4a23b983d02f8bb856adf"
+      url "https://github.com/galaxy-io/filament/releases/download/v0.24.0/filament_linux_arm64.tar.gz"
+      sha256 "89a675547c2cf04f368f960bbdf8f87bb5a622b69d6d851f88c9f1dc5869f0a3"
       define_method(:install) do
         bin.install "filament"
       end
